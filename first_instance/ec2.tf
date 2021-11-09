@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "ap-south-1"
+    region = "us-west-1"
 }
 
 resource "aws_instance" "web" {
@@ -26,7 +26,7 @@ root_block_device {
 
 ################################ creating a ebs volume with size 10GB#####################
 resource "aws_ebs_volume" "example" {
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-west-1c"
   size              = var.volumesize
 
   tags = {
